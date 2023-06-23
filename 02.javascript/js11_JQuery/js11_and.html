@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <title>and</title>
+  <script>
+    // and(): 이전함수로 되돌아가기
+    //메서드체인과 and()메서드를 이용해서 전단게로 돌아가서
+    //임의의 작업을 수행할 수 있게 한다.
+    $(()=>{
+      //실습1. h1전체의 배경색은 orange
+      //2. 짝수 글자색을 흰색
+      //3. 홀수 글자색을 빨간색
+      $('h1').css('background', 'orange');
+      $('h1').filter(':even').css('color', 'white')
+      $('h1').filter(':odd').css('color', 'red')
+    })
+    
+    $('h1').css('background', 'orange')
+            .filter(':even')
+            .css('color', 'white')
+            and()
+            .filter(':odd')
+            .css('color', 'red');
+
+//first(), last() eq()
+
+  </script>
+
+</head>
+<body>
+  <h1>header-1</h1>
+  <h1>header-2</h1>
+  <h1>header-3</h1>
+  <h1>header-4</h1>
+  
+</body>
+</html>

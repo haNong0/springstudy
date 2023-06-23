@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //중첩 for(nested for)문
+    //for() {
+    //  for() {
+
+    //}
+    //}
+    //let i =10000;
+    //for(i=1, i<=10; i++;) {
+     // console.log(`바깥 for loop... ${i}`);
+     // for(j=1, j<=10; j++;) {
+       // console.log(`----------->안쪽 for loop... ${j}`);
+    //  }
+   // }
+
+    //실습 1.구구단 중에서 9단 출력하기
+    //실습 2.구구단 전체
+  </script>
+</head>
+<body>
+  
+  <script>
+    let i =9;
+    for(j=1; j<10; j++) {
+      document.write(`${i}x${j}=${i*j}<br>`);
+    } 
+    document.write('구구단 전체찍기<br>');
+    for(let i = 1; i < 10; i++) {
+      for(j = 1;  j < 10; j++) {
+        document.write(`${i}X${j}= ${i*j}<br>`);
+      }
+    }
+    document.write('==2단====3단====4단====5단====6단====7단====8단====9단==<br>')
+    for(let i = 1; i < 10; i++) {
+      let output = '';
+      for(j = 2; j <= 9; j++) {
+        output +=(`${i}X${j}= ${i*j}\t`);
+      }
+      document.write(output+"<br>")
+    }
+    
+
+    
+
+  </script>
+</body>
+</html>

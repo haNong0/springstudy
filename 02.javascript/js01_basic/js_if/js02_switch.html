@@ -1,0 +1,42 @@
+<script>
+  //1. switch 조건문
+  let num = '2';
+  //if (Number(num) % 2 == 0) document.write('짝수 입니다.')
+//else document.write ('홀수 입니다.')
+
+/*switch(num%=2){
+  case 0 :
+    document.write('짝수 입니다.<br>');
+    break;
+  case 1 : 
+    document.write ('홀수 입니다.<br>');
+    break;
+  default :
+  document.write ('숫자가 아닙니다.<br>');
+  }*/
+  let score = 60;
+  switch(true){
+    case(90<=score):
+    document.write ('A<br>');
+    break;
+    case(85<=score):
+    document.write ('B+<br>');
+    break;
+    case(80<=score):
+    document.write ('B<br>');
+    break;
+    case(75<=score):
+    document.write ('C+<br>');
+    break;
+    case(70<=score):
+    document.write ('C<br>');
+    break;
+    case(60<=score):
+    document.write ('D<br>');
+    break;
+    default:
+    document.write ('F<br>');
+  }
+
+
+</script>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+  /* 
+  연산자
+
+
+  1.사칙연산: +, *, /, -
+  2.나머지연산:$
+  */
+  
+  //let a = 10+10;
+  a = a - 5;
+  console.log('빼기=',a, typeof a);
+  a = a * 5;
+  console.log('곱하기=',a, typeof a);
+  a = a / 5;
+  console.log('나누기=',a, typeof a);
+  a = a % 6;
+  console.log('나머지연산=',a, typeof a);
+
+  const pi = 3.141529;
+  console.log('PI=',pi, typeof pi);
+    //자바스크립트등의 프로그램언어에서는
+    //정밀한 계산에서 실수연산은 적합하지가 않다.
+  //let b = 0.1 + 0.2;
+  console.log('실수의 연산?=',b,);
+  b = (0.1 * 10) + (0.2 *10);
+  b = b / 10;
+  console.log('실수의 연산?=',b,);
+
+    //문자와 숫자의 연산 결과는?
+    //문자열의 연산은 더하기 즉, 연결연산자만 가능하다
+  let str = '문자열';
+  let num = '10';
+  let result = num + str;
+  console.log('문자열 연산 결과는?', result, typeof result);
+
+  //실습. 두사람의 나이를 입력 받아서 결과를 document.write를 이용해서
+  //출력해 보시오 pronpt ,document.write 함수를 이용
+
+  </script>
+</head>
+<body>
+  <h3>홍길동의 나이 = ??</h3>
+  <h3>홍길상의 나이 = ??</h3>
+  <h3>2 사람 나이의 합 =??</h3>
+
+  <script>
+  let age1= prompt('나이를 입력하세요', '19');
+  let age2 = prompt('나이를 입력하세요', '19');
+  let hwe = age1 +age2;
+  parseint(age1);
+  parseint(age2);
+  document.write(`<h3>두사람의 나이 합은 ${hwe}입니다.</h3>`);
+  
+  </script>
+  
+  <html>
+  <head>
+    <title>양식</title>
+
+    <script>
+        //let age1 = prompt('나이를 입력하세요', '19');
+        //let age2 = prompt('나이를 입력하세요', '19');
+        let sum = parseInt(age1) + parseInt(age2);
+        function prompfunc() 
+        {
+            document.open();
+            document.write("<h1>두사람의 나이 합은' "+sum+"입니다.</h1>");
+            document.close();
+        }
+    </script>
+  </head>
+
+  <body onload="prompfunc();">
+    <p>Some original document content.</p>
+  </body>
+</html>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <title>Document</title>
+  <script>
+    // attr 추가 or 읽기
+    $(()=>{
+      let src = $('img').attr('src'); //배열이 아니라 첫 번째 객체 속성만
+      //alert(src);
+      //alert(typeof src);
+      let wd = $('img').attr('width');
+
+      //1.값
+      //$('img').attr('width', 300);
+     // $('img').attr('height', 200);
+
+      //2.function
+      $('img').attr('width', (index)=> {
+        return (index+1) *100;
+
+      });
+      //3. obj
+      $('img').attr({
+        width: 400,
+        width: function(index) {
+          index => (index+1) * 100       
+         } 
+      });
+      // 속성객체 removeAttr()
+      $('h1') .removeAttr ('data-index');
+    });
+  </script>
+</head>
+<body>
+  <img src="./image/bp01.jpg" alt="">
+  <img src="./image/bp02.jpg" alt="">
+  <img src="./image/bp03.jpg" alt="">
+
+  <h1 data-index = '1'>Header-1</h1>
+  <h1 data-index = '2'>Header-2</h1>
+  <h1 data-index = '3'>Header-3</h1>
+  
+</body>
+</html>

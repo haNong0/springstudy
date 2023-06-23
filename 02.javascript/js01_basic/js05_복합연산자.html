@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+    복합대입연산자
+
+    +=: a+= 1 -> a=a
+    */
+    let a; //선언
+    a = 10;  //초기화
+    let b = 10; //선언과 동시에 초기화
+    b += 10; //b = b + 10 축약
+    console.log('+=', b);
+
+    b-= 5;
+    console.log('-=', b);
+    
+    b*= 5;
+    console.log('*=', b);
+    //블럭단위 편집:ctrl+왼쪽마우스 클릭 드래그
+    let list = "";
+    list +=  "<ul>";
+    list +=  "<li>HTML5</li>";
+    list +=  "<li>CSS</li>";
+    list +=  "<li>JAVA</li>";
+    list +=  "<li>REACT</li>";
+    console.log(list);
+    document.write(list);
+    
+  
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

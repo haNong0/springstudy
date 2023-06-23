@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //ECCA6 도입된 내용: let/const, class, arr function, template literal(`),기본데이터타입 symbol()...
+    window.onload =() => {
+      let img = document.createElement('img');
+      //console.log(img);
+      img.src= '/images/bts_01.jpg';
+      img.width=200;
+      img.height=150;
+      document.body.appendChild(img, '<hr>');
+
+      let img1 = document.createElement('img');
+      img1.setAttribute('src', '/images/bts_02.jpg');
+      img1.setAttribute('width',200)
+      img1.setAttribute('height',200)
+      document.body.appendChild(img1,'<hr>');
+
+    };
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // foreach:for문과 array :
+    // 배열, foreach(콜백함수);
+    // forin : for과 object :
+    // for of : for문과 array 
+
+    /*let arrl =['손흥민', '이강인', '김민재', '김연경','ㅇㅇㅇ'] 
+    console.log(`배열의 크기 = ${arrl,length}`);
+
+    for(let i=0; i<arrl,length, i++;) {
+      document.write(`${i} = ${arrl[1]}<br>`);
+    }
+
+    arrl.forEach(function(name) {
+      document.write (`${name}<br>`)
+    });
+
+    // arrrow function를 사용 (lambda식)
+    //3. for~~~of~~~ : for문과 array
+    arrl.forEach((name) => document.write(`${name}`));
+
+    let arr2 = ['🥝', '🥥', '🍇', '🍈', '🍉'];
+    arr2.forEach((x) => document.write(`${x}<br>`));
+
+    for(let fruit of arr2) {
+        document.write(`${fruit}`);
+
+    }
+
+    //3. for~~~of~~~ : for문과 array
+    let obj = {
+      name: "홍길동",
+      age: 1000,
+      addr: "조선한양",
+      tel: 1010101011 ,
+    };
+    console.log(`이름 = ${obj.name}`);
+    console.log(`나이 = ${obj.age}`);
+    console.log(`주소 = ${obj.addr}`);
+    console.log(`번호 = ${obj.tel}`);
+
+    // for in문은 객체에서 Key를 꺼네온다.
+    //for(Key in hong) {
+      //document.write(`${Key} = ${hong[Key]}<br>`); // dot연산자는 실행이 안됨  
+
+    //}
+
+    //실습. 자리 배치도
+    //현재 강의실에 인원수와 한 줄에 3명씩 앉을 경우 자리배치도를 출력해보기
+    // if , for중첩, table, 
+    //let people = prompt('몇명이 앉을건가요?',2);
+    //let sit =prompt('몇명씩 앉을건가요?',2);
+    //let te = "<table border = 1>";
+      /*if(people%sit ===0) {
+        ps = parseInt(people/sit);
+      }
+      else
+        ps = parseInt(people/sit)+1 ;
+    
+    document.write("<table>");
+      for(i = 0; i< ps; i++) {
+        document.write("<tr>");
+          for(j = 1; j<=sit; j++)
+            document.write("<td>");
+      }*/
+    
+
+  </script>
+</head>
+<body>
+  <h1>좌석배치도</h1>
+  <script>
+    let people = prompt('몇명이 앉을건가요?',2);
+    let sit =prompt('몇명씩 앉을건가요?',2);
+      if(people%sit ==0) {
+        ps = parseInt(people/sit);
+      }
+      else {
+        ps = parseInt(people/sit)+1 ;
+      }
+      console.log(`총 줄 수 = ${ps}`);
+    
+    document.write("<table border = 1px>");
+      for(i = 0; i< ps; i++) {
+        document.write("<tr>");
+          for(j = 1; j<=sit; j++) {
+            seatNo = i * sit + j  ;
+            if(seatNo> people) break;
+            document.write(`<td> 좌석${seatNo} </td>`)
+          }
+            document.write("</tr>");
+            }
+            document.write("</table>");
+  </script>
+</body>
+  
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function add() {
+      let fnum = parseInt(document.getElementById('fnum').value);
+        let snum = parseInt(document.getElementById('snum').value);
+        let result = fnum + snum;
+        document.getElementById('result').innerHTML = result;
+      }
+      function sub() {}
+      function mul() {}
+      function div() {}
+  </script>
+</head>
+
+<body>
+  <input type= 'text' name="fnum" value="20" />&nbsp&nbsp
+  <input type= 'text' name="snum" value="10" />
+  <hr>
+  <input type="button" vaule="+" onclick="add()"/> &nbsp&nbsp
+  <input type="button" vaule="-" onclick="sub()"/> &nbsp&nbsp
+  <input type="button" vaule="*" onclick="mul()"/> &nbsp&nbsp
+  <input type="button" vaule="/" onclick="div()"/>
+  <hr/>
+  result =
+  <h3 id ="rusult">
+  </h3>
+  
+
+  
+</body>
+</html>

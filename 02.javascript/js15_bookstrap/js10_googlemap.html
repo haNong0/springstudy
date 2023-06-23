@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #googlemap{
+      width:600px;
+      height:400px;
+    }
+  </style>
+</head>
+<body>
+    <!--Opne API: google map-->
+  <div class="container" id="googlemap"></div>
+  <script>
+    function myMap() {
+      let mtCenter = new google.map.LatLng(37.4355,127.129)
+      let mpapPop ={
+        center:myCenter,
+        zoom:18,
+        scrollwheel:true,
+        draggable: true,
+        myTypeId:google.maps.mapTypeId.ROADMAP
+      }
+
+      let map = new google.maps.Map(document.querySelector('#googlemap').mapPop);
+      let marker = new google.maps.marker({position: myCenter});
+      marker.setMap(map);
+    }
+  </script>
+
+  <script>
+
+  </script>
+</body>
+</html>

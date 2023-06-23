@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //if(5>2) {
+      //console.log('비교결과 = true');
+    //}
+    //console.log('프로그램 종료');
+
+    //실습1. 나이(age)를 입력받아서 18이상이면 '성인입니다'. 
+    //단순 if() {}
+    //let age = Number (prompt('나이를 입력하세요', 18)); //문자열을 받는건데 넘버 함수 안씀
+    //if(age>=18){  //이상이면 크거나 같다 인데 = 안씀
+      //console.log('성인입니다');
+
+      //2.if~else
+      //if(조건식)(true)else false
+      //18세이상일 경우 '성인입니다' 아닐경우 '미성년자입니다 ' body에 출력
+      //if(age >= 18){  
+        //document.write('<h3> 성인입니다 </h3>')}
+        //else document.write('<h3> 성인입니다 </h3>')
+
+      /*3.중첩 if
+        if(조건시) {}
+        if(조건식) {} else {}
+        else ()
+       if(조건식) {} */
+        
+       //실습3/ 시간을 입력 받아서 12시 이전일경우 '오전입니다! ', 아니면 오후입니다!
+       //오전일 경우 9시 전일 경우 '아침을 먹습니다 ' 아니면 '출근을 합니다'
+       //오후일 경우 18시전일 경우'일을 합니다' 아니면 '퇴근합니다'
+        //let time = Number (prompt('시간을 입력하세요', 12, '시'));
+        /*if(time >=12) {
+          console.log('오후입니다.');
+                    document.write('<h3>오후입니다. </h3>')
+        }
+          else { console.log('오전입니다.');
+          document.write('<h3>오전입니다. </h3>')
+        }
+          if(time>=18) {
+            console.log('퇴근합니다.');
+            document.write('<h3>퇴근합니다. </h3>')
+        }
+          else { console.log('일을 합니다.');
+                    document.write('<h3>일을합니다. </h3>')
+        }
+          if(time<=9) { console.log('아침을 먹습니다.');
+                    document.write('<h3>아침을 먹습니다. </h3>')
+        } 
+          else { console.log('출근을 합니다.')
+                    document.write('<h3>출근을합니다. </h3>')
+        }*/
+
+        
+        //3. if() {} else if () {}....else {}
+        /*let time = Number (prompt('시간을 입력하세요', 12, '시'));
+        if(time>=12) {
+          document.write('<h3>오후입니다. </h3>')
+          document.write('<h3>일을합니다. </h3>')
+
+        } else if(time<=9) {
+          document.write('<h3>아침을 먹습니다. </h3>')
+          document.write('<h3>출근을합니다. </h3>')
+
+        } else if(time>=18) {
+          document.write('<h3>퇴근합니다. </h3>')
+          document.write('<h3>오후입니다. </h3>')
+        }
+    */
+  </script>
+  <script>
+  /*
+  실습1- score(점수)를 입력받아서 90이상이면 'A학점입니다!'아니면 B학점입니다.
+  실습2- score(점수)를 입력받아서 95이상이면 'A+학점입니다!'아니면 B학점입니다.
+  85 B+ 80 B 60미만 F
+   */
+    let score = Number (prompt('점수를 입력하세요', 80, '점'));
+    if(score>=95) {
+      document.write('<h3>A+입니다. </h3>')
+
+    } else if(95>score && score>=90) {
+      document.write('<h3>A입니다. </h3>')
+    }
+    else if(score<90 && score>=85) {
+      document.write('<h3>B+입니다. </h3>')
+    } 
+    else if(85>score && score>=80){
+      document.write('<h3>B입니다. </h3>')
+    }
+    else if(score<80 && score>=75) {
+      document.write('<h3>C+입니다. </h3>')
+    } 
+    else if(75>score && score>=70) {
+      document.write('<h3>C입니다. </h3>')
+    }
+    else if(score<70 && score>=60) {
+      document.write('<h3>D입니다. </h3>')
+    } else (60>score); {
+      document.write('<h3>FFFFF입니다. </h3>')
+    }
+  </script>
+  <script>
+    //실습3. 임의의 숫자를 입력받아서 숫자가 짝수인지 홀수 인지를 출력하세요
+    let num = (prompt('숫자를 입력하세요', 2));
+    if(num===null) {
+      document.write('<h3>입력이 되지않았습니다. 다시 입력하세요 </h3>');
+    }
+    if(num%2==0) {
+      document.write('<h3>홀수입니다. </h3>');
+    } else {
+      document.write('<h3>짝수입니다. </h3>');
+    }
+    //조건연산자(삼항 연산자)
+    Number(num) % 2 == 0 ? doucument.write('짝수 입니다.')
+                        : doucument.write ('홀수 입니다.')
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

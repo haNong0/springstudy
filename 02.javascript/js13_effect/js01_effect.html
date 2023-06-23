@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <title>Document</title>
+  <script>
+    /*
+    제이쿼리 이펙트
+
+    A. effect method
+
+    show():문서객체 보이게 하기
+    hide():문서객체를 보이게 하기
+    toggle() :show()  hide() 번갈아가면서 수행
+    slidedown(): 슬라이드효과 보이기
+    slideup(): 슬라이드효과 감추기
+    slidetoggle(): down up 번갈아가면서 수행
+    fadein(): 서서히 보이기
+    fadeout(): 서서히 감추기
+    fadetoggle(): 번갈아가며 수행 
+
+    B. effect 메서드 4가지형태
+    opacity, height, top, width, left, margin right, padding bottom
+
+     1. $(선택자).method()
+    2. $(선택자).method(speed) : slow, normal, fast, 숫자(ms)
+    3. $(선택자).method(speed, 콜백함수) : 효과가 수행되는 수행되는
+       동안 수행할 함수(callback 함수)를 지정, 함수수행결과가 리턴
+    4. $(선택자).method(speed, easing, 콜백함수) : easing 애니메이션효과 적용 
+    
+    */
+   $(function () {
+    $('button').click(()=>{
+      $('.page').fadeToggle(100,function(){alert('Toggle Effect')});
+    })
+   })
+  </script>
+</head>
+<body>
+  <button>effect</button>
+  <div class="page">
+      <h1>노동시간</h1>
+    <p>윤 대통령은 노동부가 지난 6일 입법예고한 법안과 관련, "입법예고 기간 중 표출된 근로자들의 다양한 의견, 특히 MZ 세대의 의견을 면밀히 청취해 법안 내용과 대국민 소통에 관해 보완할 점을 검토하라"고 지시했다고 김은혜 홍보수석이 서면 브리핑을 통해 전했다.
+
+      제도 개편에 대한 각계 우려가 제기되자 보완을 주문한 것으로 보인다.
+      
+      앞서 노동부는 근로자들이 1주일에 52시간까지만 일할 수 있도록 한 현행 제도를 변경해 바쁠 때는 최대 69시간까지 일할 수 있도록 허용하는 내용의 노동법 개정안을 입법예고했다.
+      </p>
+  </body>
+  </div>
+ 
+</html>

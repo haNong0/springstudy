@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>오류수정</title>
+  <script>
+    /*
+    Array객체
+
+    1.배열을 생성하는 방법
+    let arr1 = []
+    let arr2 = [1, 2, 3,4]
+    let arr3 = Array();
+    let arr4 = Array(number) -> 지정된 number갯수 크기를 갖는 빈 배열객체를 생성
+    let arr5 = Array(any,...,any)-> 매개변수를 요소의 값으로 갖는 배열 객체를 생성
+
+
+    2.속성과 메서드
+
+    length : 배열의 크기
+    push() : 배열끝에 추가
+    pop()  : 맨뒤에 요소를 꺼내오기 동시에 삭제를 해줌
+    join() : 배열요소를 문자열로 연결해서 하나의 문자열로 리턴
+    reverse() : 배열요소를 뒤집기 (원본변경)
+    sort() : 배열요소를 정렬(원본변경)
+    
+    map() : 원본배열을 가공을 해서 
+    reduce() :  요소들을 주어진리듀서함수로 실행한 후에 하나의 결과값을 반함 
+    filter() : 원본배열에서 특정 조건에 맞는 요소만 모아서 새로운 배열로 리턴
+    forEach() : 요소들을 주어진 함수로 반복 각각 전달
+    concat() : 배열을 합치는 함수
+    
+    */
+    let arr = [1, 2, 3, 4, 5]
+    document.write(`1.length = ${arr.length}`);
+    document.write(`2. push(10) = ${arr.push(10 )} => ${arr}`);
+    document.write(`2. push({}, '문자열', ()=>{}) ${arr.push({}, '문자열', ()=>{})}`);
+    document.write(`4. pop() = ${arr.pop()} => ${arr} <br>`);
+    document.write(`5. arr1.slice(1,4) = ${arr.slice(1,4)} => ${arr} <br>`);
+    
+    let arr2 = [1, 2, 3, 4, 5]
+    document.write(`arr2.join('-') = ${arr2.join('-')} =>${arr2}<br>`);
+    document.write(`arr2.reverse() = ${arr2.reverse()} =>${arr2}<br>`);
+    document.write(`arr2.sort() = ${arr2.sort()} =>${arr2}<br>`);
+
+    arr2 = [1, 4, 9,16];
+    document.write( `arr2.map(() => {}) = ${arr2.map(function(a){return a*2})} => ${arr2}<br>`);
+    document.write( `arr2.map(() => {}) = ${arr2.map(a=>a*2)} => ${arr2}<br>`);
+    document.write( `arr2.filter(() => {}) = ${arr2.filter(a=>a>4)} => ${arr2}<br>`);
+  //reduce : 1 + 4 + 9 + 16 = 30
+    const 초기값 = 100;
+    const total= arr2.reduce((이전값, 현재값) =>(이전값 + 현재값 , 초기값));
+    document.write( `arr2.reduce(() => {}) = ${total}<br>`);
+
+    //11. forEach
+    const sum= arr2.forEach((a)=>console.log(a));
+    arr2.forEach(a=> {
+      if (a>4) {
+        console.log(a);
+      }
+    }
+    );
+    
+    //document.write(`arr1.concat(arr2) = ${arr1.concat(arr2)<br>`);
+
+      function Student(name, kor, eng, mat) {
+      this.name = name;
+      this.name = kor;
+      this.name = eng;
+      this.name = mat;
+
+      this.getSum = function() { return this.kor + this.eng + this.mat}
+      this.getAvg = () => this.getSum / 4;
+      this.toString = function(){
+        return `이름=${this.name},국어=${this.kor},영어=${this.eng},수학${this.mat}`
+      }
+    }
+    let students = [];
+      students.push(new Student('홍길동', 10 ,10, 10))
+      students.push(new Student('손흥민', 20 ,10, 10))
+      students.push(new Student('이강인', 30 ,10, 10))
+
+      //1.이름순
+      students.sort ((a, b) => {
+        return b.name - a.name;
+      })
+      for(let i in students) {
+        document.write(students[i].toString(), '<br>')
+      }
+      //2.홍길순
+      students.sort ((a, b) => {
+        return b.getSum () - a.getSum ();
+      })
+      for(let i in students) {
+        document.write(students[i].toString(), '<br>')
+      }
+      //3.2등까지만 출력
+      let std =students.sort ((a, b) => {
+        return b.getSum () - a.getSum ();
+      }).slice(0, 2);
+      for(let i in std) {
+        document.write(std[i].toString(), '<br>')
+      }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,232 @@
+
+body {
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wJc6ZaTZ-6zUpP2X75s2d4lK0z1ROf3fPw&usqp=CAU");
+  background-size: cover; 
+background-repeat: no-repeat;
+background-position: center;
+
+  margin:0;
+  font-family:'D2coding';
+}
+
+a {text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 12px;
+}
+.navbar bg-light {
+  display: flex;
+  justify-content: space-between;
+  align-items: 0;
+}
+
+.navbar_logo {
+  font-size: 24px;
+  color: black;
+}
+
+.navbar_menu {
+  display: flex;
+  text-align: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.navbar_menu li {
+  padding: 8px 12px;
+}
+/*메뉴바에 커서를 올렸을 때 색 + 상자의 모양*/
+.navbar_menu li:hover {
+  background-color: #d49466;
+  border-radius: 4px;
+}
+.navbar_icons {
+  list-style: none;
+  color: black;
+  display: flex;
+  
+}
+.navbar_icons li {
+  padding: 8px 12px;
+}
+.navbar_toogleBtn {
+  display: none;
+  position: absolute; /*절대적위치:버튼만 한위치에 고정*/
+  right: 32px;
+  font-size: 24px;
+  color: black;
+}
+/*창이 작을때 */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px 24px;
+  }
+  .navbar_menu{
+    display:block;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.navbar_menu li {
+  width: 100%;
+  text-align:center
+}
+.navbar_icons {
+  display:none;
+  justify-content: center;
+  width: 100%;
+}
+.navbar_toogleBtn {
+  display: block;
+}
+
+.navbar_menu.active,
+.navbar_icons.active {
+  display: flex;
+}
+
+
+/* 달력 */
+
+.sec_cal {
+  width: 360px;
+  margin: 0 auto;
+  font-family: "NotoSansR";
+}
+
+.sec_cal .cal_nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 78px;
+}
+
+.sec_cal .cal_nav .year-month {
+  width: 300px;
+  text-align: center;
+  line-height: 1;
+}
+
+.sec_cal .cal_nav .nav {
+  display: flex;
+  border: 1px solid  white;
+  border-radius: 5px;
+}
+
+.sec_cal .cal_nav .go-prev,
+.sec_cal .cal_nav .go-next {
+  display: block;
+  width: 50px;
+  height: 78px;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec_cal .cal_nav .go-prev::before,
+.sec_cal .cal_nav .go-next::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #ddd;
+  border-width: 3px 3px 0 0;
+  transition: border 0.1s;
+}
+
+.sec_cal .cal_nav .go-prev:hover::before,
+.sec_cal .cal_nav .go-next:hover::before {
+  border-color: white;
+}
+
+.sec_cal .cal_nav .go-prev::before {
+  transform: rotate(-135deg);
+}
+
+.sec_cal .cal_nav .go-next::before {
+  transform: rotate(45deg);
+}
+
+.sec_cal .cal_wrap {
+  padding-top: 40px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.sec_cal .cal_wrap .days {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.sec_cal .cal_wrap::after {
+  top: 368px;
+}
+
+.sec_cal .cal_wrap .day {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 7);
+  text-align: left;
+  color: #ddd;;
+  font-size: 12px;
+  text-align: center;
+  border-radius:5px
+}
+
+.current.today {background: rgb(242 242 242);}
+
+.sec_cal .cal_wrap .dates {
+  display: flex;
+  flex-flow: wrap;
+  height: 290px;
+}
+
+.sec_cal .cal_wrap .day:nth-child(7n -1) {
+  color: #3c6ffa;
+}
+
+.sec_cal .cal_wrap .day:nth-child(7n) {
+  color: #ed2a61;
+}
+
+.sec_cal .cal_wrap .day.disable {
+  color: #ddd;
+}
+
+
+/*시계*/
+
+.date{
+  display: flex;
+  text-align: center;
+  font-size: 30px; 
+  color: white;
+}
+
+.time{
+  display: flex;
+  text-align: center;
+  font-size: 30px;
+  color: white; 
+}
+.row2 {
+  border: border solid white;;
+}
+.container text-center {
+  border: solid white;
+}

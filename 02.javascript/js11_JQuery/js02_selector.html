@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <title>Document</title>
+  <script>
+    $(function() {
+    $('h1').css('color', 'red'); //getElementByTagname('h1').css()
+    $('p').css('color', 'green');
+    $('#target').css('color','orange');
+    $('h1#target').css('color', 'aqua');
+    });
+  </script>
+  <style>
+    /*h1{color: red;}
+    h1#target {color: green;}*/
+  </style>
+<body>
+  <h1>아무거나</h1>
+  <p>영어는 영국의 구성국인 잉글랜드에서 기원한 서게르</p>
+  <p id="target"> 글자 수는 26개이고 자음 21개와 모음 5개로 이루어져 있다. 오늘날에는 영국과 영연방, 북미의 국가를 중심으로 공식 언어뿐만 아니라 그 외 지
+    글자 수는 26개이고 자음 21개와 모음 5개로 이루어져 있다. 오늘날에는 영국과 영연방, 북미의 국가를 중심으로 공식 언어뿐만 아니라 그 외 지
+  </p>
+  <h1 id="target">222영어는 영국의 구성국인 잉글랜드에서 기원한 서게르222</h1>
+</body>
+</html>

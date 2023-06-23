@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    let date1 = new Date();
+
+    //1.문자열을 이용한 객체생성
+    let date2 = new Date('Dec 9 2023');
+    let date3 = new Date('March 9 2023 23:09:03');
+    let date4= new Date('March 9 2023 12:09:03');
+
+    document.write (date2, "<br>");
+    document.write (date3, "<br>");
+    document.write (date4, "<br>");
+
+    //2. 숫자를 이용한 객체 생성
+    date3 = new Date(2023, 3, 9)
+    document.write(date4, '<br>');
+
+    //3. 메서드
+    //getXxxx,setXxx메서드
+
+    //날짜연산
+    let now = new Date()
+    let bef = new Date(2023,03, 01)
+    document.write(`${now.getTime() - bef.getTime()}`, '<br>')
+
+  
+    document.write(`Math.floor(${now.getTime() - bef.getTime()/(1000 * 60 *60 * 24)})`, '<br>')
+
+    //날짜 간격을 구하는 메서드
+    Date.prototype.getInterval = function(beforeDate) {
+      let interval;
+    }
+
+    //양수처리
+    if(this > beforeDate) {
+      interval = this.getTime() - beforeDate.getTime();
+    } else {
+      interval = beforeDate.getTime() -this.getTime();
+    }
+    return Math.floor(interval / (1000*60*60*24))
+  
+    Date.prototype.getInterval = function (beforeDate){
+
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
