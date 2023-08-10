@@ -1,0 +1,24 @@
+1684820514839	Move compilation unit
+1684820556163	Delete element
+1684821405745	Delete element
+1684821501717	Delete element
+1684826056760	Move 'write.jsp' to 'board'
+1684826071785	Rename resource 'write.jsp'
+1684828553973	Delete element
+1684829448050	Delete element
+1684888417555	Rename resource 'Board_write.jsp'
+1684888460125	Rename resource 'board_write.jsp'
+1684888468555	Rename resource 'boardwrite.jsp'
+1684890071477	Rename resource 'boardWrite.jsp'
+1684890596748	Rename resource 'board_Write.jsp'
+1684891109668	Rename resource 'boardlist.jsp'
+1684905481703	Rename type 'BoardModifyFormAction'
+1684905511241	Rename type 'BoardModifyAction'
+1684906870767	Rename type 'DeleteFormAction'
+1684975132429	Rename type 'boardReplyForm'
+1684975954792	Rename resource 'reply.jsp'
+1684999107958	Rename resource 'memberlist.jsp'
+1684999984906	Move compilation unit
+1685000291290	Copy compilation unit
+1685000574071	Move compilation unit
+1685000585665	Rename type 'MemberRegisterService'

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        
+        var Title = function(props)  {
+            return (
+        <div>
+        <h2>{props.title}</h2>
+        </div>
+            )
+            
+        }
+        
+        var TodoList = function (props) {
+        var todolist = props.todos.map((item, index) => {
+          let status = '';
+          if (item.done == true) status = '완료';
+          else status = '진행중';
+          return ( <li key={item.id}>{' '}{item.todo} : {status}{' '}</li> );
+        });
+
+        return <ul> {todolist} </ul>;
+      };
+        var App = function() {
+            var data = {
+                title: 'Todo List',
+                todos:[
+                    {id:1, todo:'1st todo...', done:false},
+                    {id:2, todo:'2st todo...', done:false},
+                    {id:3, todo:'3st todo...', done:true},
+                    {id:4, todo:'4st todo...', done:false},
+                    {id:5, todo:'5st todo...', done:false}
+                ]
+            }
+            return (
+                <div>
+                {Title(data)}
+                <TodoList todos={data.todos} />
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App/>, document.getElementById('root'))
+    </script>
+</body>
+</html>

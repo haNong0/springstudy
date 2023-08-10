@@ -1,0 +1,5 @@
+ vscode, intelij
+ node 설치
+ chorme React developer tools 크롬 플러그인
+
+ vscode에서 emmet 실행 자동완성 setting

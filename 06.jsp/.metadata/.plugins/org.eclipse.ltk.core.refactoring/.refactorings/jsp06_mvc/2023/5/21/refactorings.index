@@ -1,0 +1,11 @@
+1684717986387	Move 'commandHandler.properties' to 'WEB-INF'
+1684719284349	Rename compilation unit 'HelloHandler.java'
+1684719294381	Rename compilation unit 'commandHandler.java'
+1684719972223	Rename type 'CommandHandler'
+1684720012169	Delete element
+1684723491542	Delete element
+1684723526927	Delete element
+1684723530199	Delete element
+1684723775336	Move 'hello.jsp' to 'view'
+1684723889726	Delete element
+1684736347401	Copy files
